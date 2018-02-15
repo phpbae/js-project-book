@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>구구단을 출력해보자.</title>
+
+    <link rel="stylesheet" type="text/css" href="css/timesTable.css">
+
+</head>
+<body>
+
+<button type="button" onclick="timesTable.controller._setNum()">구구단을 출력!</button>
+
+<div id="result">
+
+</div>
+
+
+<h1 id="title">
+    할 일 목록
+</h1>
+<hr>
+<button id="add-work">할 일 추가</button>
+
+<ul id="work-list">
+    <li>밥 먹기</li>
+    <li>운동 하기</li>
+    <li>공부 하기</li>
+</ul>
+
+</body>
+</html>
+<script src="js/timesTable.js"></script>
+
+<script>
+    window.onload = function () {
+        console.log("실행");
+        appendWork.controller._initEvent();
+    }
+</script>
