@@ -1,0 +1,28 @@
+.cal-form {
+    border: 1px #999999 solid;
+    max-width: 350px;
+    max-height: 650px;
+    line-height: 47px;
+    background: black;
+    font-size: 20px;
+}
+
+.cal-form td {
+    border: 1px black solid;
+    text-align: center;
+    background: gray;
+    width: 6%;
+}
+
+.cal-form .cal-process {
+    background: darkgray;
+    color: whitesmoke;
+}
+
+#result.cal-res {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    color: whitesmoke;
+    text-align: right;
+}
