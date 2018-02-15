@@ -1,9 +1,7 @@
 var timesTable = timesTable || {};
-
 timesTable.controller = (function () {
 
     var num;
-
 
     return {
         _setNum: function () {
@@ -42,7 +40,6 @@ timesTable.controller = (function () {
 
 
 var appendWork = appendWork || {};
-
 appendWork.controller = (function () {
 
     var addBtn;
