@@ -1,0 +1,27 @@
+#calender-form {
+    background: black;
+    border: 1px solid #999999;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+}
+
+#calender-form .title{
+    font-size: 50px;
+    color: white;
+    padding: 10px 0px;
+}
+
+#calender-form thead td{
+    color: greenyellow;
+    font-size: 30px;
+}
+
+#calender-form tbody td{
+    font-size: 25px;
+}
+
+#calender-form .high-light{
+    color: aquamarine;
+    font-weight: bold;
+}

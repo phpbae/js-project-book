@@ -3,11 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>달력</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/calender.css">
 </head>
 <body>
 
+<div id="calender-form">
+    <div class="row">
+        <div class="col-sm-2" style="padding: 10px 0px;">
+            <button type="button" class="btn btn-info btn-xs" id="pre-calender"> < </button>
+        </div>
+        <div id="title" class="col-sm-8 title">
+
+        </div>
+        <div class="col-sm-2" style="padding: 10px 0px;">
+            <button type="button" class="btn btn-info btn-xs" id="next-calender"> > </button>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>일</td>
+                <td>월</td>
+                <td>화</td>
+                <td>수</td>
+                <td>목</td>
+                <td>금</td>
+                <td>토</td>
+            </tr>
+        </thead>
+        <tbody id="calender-contents">
+
+        </tbody>
+    </table>
+</div>
+
 </body>
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/calender.js"></script>
+
+
+<script>
+    window.onload = function () {
+        calender.controller._init();
+    }
+</script>
