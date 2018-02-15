@@ -14,7 +14,16 @@
     width: 6%;
 }
 
-.cal-form .cal-process {
+.cal-form input {
+    text-align: center;
+    background: gray;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+    padding: 15px 0px;
+}
+
+.cal-form .cal-process input{
     background: darkgray;
     color: whitesmoke;
 }
