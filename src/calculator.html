@@ -10,7 +10,7 @@
 
 <div class="cal-form">
     <div id="result" class="cal-res">
-        0
+
     </div>
     <div class="cal-input">
         <form id="cal" name="cal">
@@ -49,13 +49,86 @@
     </div>
 </div>
 
+<p> -jQuery로 작성된 계산기- </p>
+
+<div class="cal-form">
+    <div id="result2" class="cal-res">
+
+    </div>
+    <div class="cal-input">
+        <form id="cal2" name="cal2">
+            <table>
+                <tbody>
+                <tr>
+                    <td><input type="button" value="7"></td>
+                    <td><input type="button" value="8"></td>
+                    <td><input type="button" value="9"></td>
+                    <td class="cal-process"><input type="button" value="+"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="4"></td>
+                    <td><input type="button" value="5"></td>
+                    <td><input type="button" value="6"></td>
+                    <td class="cal-process"><input type="button" value="-"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="1"></td>
+                    <td><input type="button" value="2"></td>
+                    <td><input type="button" value="3"></td>
+                    <td class="cal-process"><input type="button" value="*"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="0"></td>
+                    <td class="cal-process"><input type="button" value="%"></td>
+                    <td class="cal-process"><input type="button" value="/"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="clear"></td>
+                    <td colspan="2" class="cal-process"><input type="button" value="="></td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>
+
 </body>
 </html>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/calculator.js"></script>
+
 
 <script>
     window.onload = function () {
-
+        calculator.controller._init();
     }
+
+
+    //jquery 코드.(더 간결하다.)
+    $(document).ready(function () {
+        $("#cal2").on('click', 'input', function () {
+            var inputValue = $(this).val();
+            var htmlValue = $("#result2").html();
+            if (inputValue != 'clear' && inputValue != '=') {
+                if (htmlValue == 0) {
+                    htmlValue = '';
+                }
+                $("#result2").html(htmlValue + inputValue);
+            } else if (inputValue == 'clear') {
+                $("#result2").empty();
+            } else if (inputValue == '=') {
+                try {
+                    $("#result2").html(eval(htmlValue.trim()));
+                } catch (err) {
+                    console.log(err);
+                    alert('잘못 입력되었습니다. 다시 시도해주세요!');
+                    $("#result2").html(0);
+                }
+
+            }
+
+        });
+    });
+
 </script>

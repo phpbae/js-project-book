@@ -35,3 +35,12 @@
     color: whitesmoke;
     text-align: right;
 }
+
+#result2.cal-res {
+    width: 100%;
+    height: 50px;
+    font-weight: bold;
+    color: greenyellow;
+    text-align: right;
+    background: deepskyblue;
+}
