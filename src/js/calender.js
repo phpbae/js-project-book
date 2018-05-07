@@ -45,6 +45,9 @@ calender.controller = (function () {
         },
 
         _printCalender: function (year, month, firstDay, firstDate, lastDate, todayDate) {
+            var todayDateObject = new Date();
+            var todayYear = todayDateObject.getFullYear();
+            var todayMonth = todayDateObject.getMonth();
             var calenderContents = document.getElementById('calender-contents');
             calenderContents.innerHTML = '';
 
@@ -61,7 +64,7 @@ calender.controller = (function () {
 
             for (var i = 1; i <= lastDate; i++) {
                 tdElement[tdIndex].innerHTML = i;
-                if (i == todayDate) {
+                if (i == todayDate && todayYear == year && todayMonth == month) {
                     tdElement[tdIndex].className = 'high-light';
                 }
                 tdIndex++;
@@ -79,5 +82,6 @@ calender.controller = (function () {
 })();
 
 function callPrintCalender(year, month, firstDay, firstDate, lastDate, todayDate) {
-    calender.controller._printCalender(year, month, firstDay, firstDate, lastDate, todayDate);
+    var todayDateObject = new Date();
+    calender.controller._printCalender(year, month, firstDay, firstDate, lastDate, todayDate == null ? todayDateObject.getDate(): todayDate);
 }
